@@ -25,7 +25,7 @@ I'm currently working on [Positron](https://positron.posit.co/), a next-generati
 
 Jim (Jupyter in macOS) is a simple, beautiful Jupyter notebook editor for macOS. Think [Bear](https://bear.app/), for [Jupyter](https://jupyter.org/).
 
-{{< video ./posts/jim.mp4 >}}
+{{< video ./videos/jim.mp4 >}}
 
 ## 2022
 
@@ -33,7 +33,7 @@ Jim (Jupyter in macOS) is a simple, beautiful Jupyter notebook editor for macOS.
 
 A smarter search engine for a local (South African) fashion and homeware store.
 
-{{< video ./posts/meepo.mp4 >}}
+{{< video ./videos/meepo.mp4 >}}
 
 I have no affiliation with said store. I built this for myself, because I was frustrated at how difficult it was to find what I wanted with the existing search engine + I was curious how well CLIP (a relatively new AI technique with open source code and models) would work here.
 

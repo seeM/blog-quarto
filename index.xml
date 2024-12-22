@@ -853,7 +853,7 @@ Why use a Virtual Private Server(VPS) instead of a modern platform as a service 
 <p>Here are some more detailed tips for scraping responsibly:</p>
 <ul>
 <li>Check how big the viewership of the website is. I would personally be hesitant to scrape a small website and would probably prefer to email the owner directly.</li>
-<li>Identify yourself with contact information via the user agent header – don’t try to fake being a human! A simple pattern you can use is&nbsp;<code>your.website.com/x.y (your@email.com)</code>&nbsp;where&nbsp;<code>x.y</code>&nbsp;is your scraper’s version number.</li>
+<li>Identify yourself with contact information via the user agent header – don’t try to fake being a human! A simple pattern you can use is&nbsp;“your.website.com/x.y (your@email.com)”&nbsp;where&nbsp;x.y&nbsp;is your scraper’s version number.</li>
 <li>Be considerate about their resource usage, especially since you aren’t their intended audience.</li>
 <li>Do the bulk of your requests during off-peak times depending on the local timezone of their audience.</li>
 <li>Sleep between requests as much as you possibly can. Add small random amounts as well to reduce the likelihood of overlapping with other scheduled scrapers and bots, thus reducing peak load.</li>

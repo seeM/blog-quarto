@@ -132,7 +132,16 @@ a sup {
 
 // Listing
 
+// Hide listing header rows.
+.quarto-listing-table thead { display: none; }
+
 div.quarto-post .thumbnail img { border-radius: .25rem; }
+
+td .listing-date { font-family: monospace; font-size: 0.9rem; color: $gray-600; white-space: nowrap; }
+
+// Disable listing borders.
+.table { border: 0; }
+.table>:not(caption)>*>* { border-bottom: 0;}
 
 // Navs
 

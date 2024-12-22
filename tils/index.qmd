@@ -6,7 +6,7 @@ listing:
   categories: false
   type: table
   fields: [date, title]
-  date-format: short
+  date-format: YYYY-MM-DD
   sort-ui: false
   filter-ui: false
   feed: true

@@ -22,12 +22,6 @@ website:
     right:
       - icon: github
         href: https://github.com/seem
-      - icon: rss
-        text: Posts
-        href: index.xml
-      - icon: rss
-        text: TILs
-        href: tils/index.xml
 
   site-url: https://wasimlorgat.com
   repo-url: https://github.com/seem/blog

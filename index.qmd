@@ -1,5 +1,4 @@
 ---
-title: Wasim Lorgat
 description: "A collection of technical blogs and talks on software engineering and machine learning."
 listing:
   contents: [posts, posts.yml]
@@ -10,15 +9,29 @@ listing:
   feed: true
   filter-ui: false
   sort-ui: false
-  date-format: short
+  date-format: YYYY-MM-DD
 comments: false
 pagetitle: Wasim Lorgat
 author: ''
 title-block-style: none
 ---
 
+::: me
+![](images/me.png)
+:::
+
+Hi, I'm Wasim. I create tools that make programming more accessible. I'm currently working on [Positron](https://positron.posit.co/), a next-generation data science IDE. Previously, I was a core developer of [nbdev](https://nbdev.fast.ai/), a notebook-driven software development tool suite.
+
+Before that, I held technical leadership roles at South African startups. At [DataProphet](https://dataprophet.com/), I led the development of machine learning techniques for reducing defects in manufacturing plants. And at [Aerobotics](https://www.aerobotics.com/), I led the team that built aerial drone computer vision systems to provide farmers with high-resolution crop data.
+
+I was once a professional [DotA 2](https://www.dota2.com/home) player and part of a team at [Bravado Gaming](https://www.bravadogaming.com/) that represented South Africa on the international stage.
+
 This is where I share technical blogs and talks on software engineering and machine learning.
 
-You can reach me at [mwlorgat\@gmail.com](mailto:mwlorgat@gmail.com){data-analytics="\"Consulting: Click\""} if you'd like to get in touch.
+You can reach me via [email](mailto:mwlorgat@gmail.com){data-analytics="\"Consulting: Click\""} if you'd like to get in touch.
 
 [Mastodon verification](https://sigmoid.social/@seem){rel="me" style="display: none"}
+
+<br>
+
+## Recent posts

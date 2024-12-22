@@ -11,15 +11,33 @@ More recent projects are listed first.
 
 Click on a project's heading to go to its website/repo.
 
+## 2024
+
+### [Positron](https://positron.posit.co/)
+
+I'm currently working on [Positron](https://positron.posit.co/), a next-generation data science IDE by [Posit](https://posit.co/).
+
+![A screenshot of a typical Positron session.](https://positron.posit.co/images/astropy.png)
+
+## 2023
+
+### [Jim](https://github.com/seeM/Jim)
+
+Jim (Jupyter in macOS) is a simple, beautiful Jupyter notebook editor for macOS. Think [Bear](https://bear.app/), for [Jupyter](https://jupyter.org/).
+
+{{< video https://github-production-user-asset-6210df.s3.amazonaws.com/559360/241265877-332cea34-b32e-4bfb-a27f-b22e3773f4bb.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20241222%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241222T090331Z&X-Amz-Expires=300&X-Amz-Signature=732f43a69cbdd6123258dc5940af5a40997ef76acb45ba92cc9ee5beff68a4a0&X-Amz-SignedHeaders=host >}}
+
 ## 2022
 
 ### [Meepo](https://meepo.shop)
 
 A smarter search engine for a local (South African) fashion and homeware store.
 
+![The homepage of the Meepo search engine.](images/meepo.png)
+
 I have no affiliation with said store. I built this for myself, because I was frustrated at how difficult it was to find what I wanted with the existing search engine + I was curious how well CLIP (a relatively new AI technique with open source code and models) would work here.
 
-I think it works quite well! It's much more forgiving than the original search engine. I don't have to guess what exactly they decided to label a particular item. But what I like even more is that it works quite well for abstract things like "colourful shoes".
+I think it works quite well. It's much more forgiving than the original search engine. I don't have to guess what exactly they decided to label a particular item. But what I like even more is that it works quite well for abstract things like "colourful shoes".
 
 Here's the full stack:
 
@@ -30,7 +48,7 @@ Here's the full stack:
 - Web: Django serving HTML/Tailwind/daisyUI
 - IDE: Developed in notebooks with nbdev
 
-I tried to keep the implementation as simple as possible and I'm happy with the result! It took ~2 weeks to build and has been running seamlessly without my input ever since.
+I tried to keep the implementation as simple as possible and I'm happy with the result. It took ~2 weeks to build and has been running seamlessly without my input ever since.
 
 Check out [this Twitter thread](https://twitter.com/wasimlorgat/status/1596038255236915200) for more details.
 
@@ -49,12 +67,12 @@ Both bring [Julia's multiple dispatch](https://docs.julialang.org/en/v1/manual/m
 
 ## 2021
 
-### [EasyEquities browser extension](https://twitter.com/search?q=from%3Awasimlorgat%20ee%20OR%20extension&src=typed_query&f=top)
+### EasyEquities browser extension
 
 A browser extension for the EasyEquities investment platform built with TypeScript, React, React Router, and Mock Service Worker (to develop against a mocked version of their API).
 
 This started with frustration that EasyEquities didn't provide a single view of my holdings across all of my investment accounts, nor of my time-weighted returns.
-I made good progress but stopped building this since there's no public EasyEquities API, and sending handcrafted requests to the internal API of my investment platform seems like a bad idea!
+I made good progress but stopped building this since there's no public EasyEquities API, and sending handcrafted requests to the internal API of my investment platform seems like a bad idea.
 
 ### [Repo links](https://github.com/seeM/repo-links)
 
@@ -64,7 +82,7 @@ A tiny command-line tool to quickly open URLs related to your repos. I made this
 
 Save your personal data from MyFitnessPal to a SQLite database.
 I occasionally use MyFitnessPal to track my weight and calories.
-Inspired by the [dogsheep movement](https://dogsheep.github.io/), I built this to afford personal analytics on my own data.
+Inspired by the [dogsheep movement](https://dogsheep.github.io/), I built this for personal analytics on my own data.
 
 ### [CircleCI to SQLite](https://github.com/seeM/circleci-to-sqlite)
 
@@ -75,7 +93,6 @@ I threw this together for a quick analysis on build times at a former workplace,
 
 An attempt at reverse engineering ncode paper technology.
 I got all the way down from what looked like dots on paper to a matrix which I needed to decode.
-Perhaps I'll get back to it some day!
 
 ### [Romulus](https://github.com/seeM/romulus)
 
@@ -97,7 +114,7 @@ Tiny command-line tools for working with Roam graphs.
 
 ### [Roam parser](https://github.com/seeM/roam-parser)
 
-A tiny Roam parser built with Clojure and instaparse. I also [live tweeted](https://twitter.com/wasimlorgat/status/1345746187832483840?s=20&t=vyOxosgsHcSCg6aAdVQyTg) the entire development process.
+A tiny Roam parser built with Clojure and instaparse.
 
 ### [Image alignment](https://github.com/seeM/image-align)
 
@@ -113,11 +130,11 @@ I wrote a corresponding [step-by-step tutorial](https://wasimlorgat.com/posts/ed
 
 ### [Advent of Code](https://github.com/seeM/advent-of-code-2020)
 
-I enjoyed taking part in AoC for years [2017](https://github.com/seeM/advent-of-code-2017), [2018](https://github.com/seeM/advent-of-code-2018), [2019](https://github.com/seeM/advent-of-code-2019), and [2020](https://github.com/seeM/advent-of-code-2020).
+I enjoyed taking part in AoC for a few years ([2017](https://github.com/seeM/advent-of-code-2017), [2018](https://github.com/seeM/advent-of-code-2018), [2019](https://github.com/seeM/advent-of-code-2019), and [2020](https://github.com/seeM/advent-of-code-2020)).
 
 ### [Alfred Github local](https://github.com/seeM/alfred-github-local)
 
-An Alfred workflow to open GitHub repo URLs via a local workspace directory. No GitHub API access needed!
+An Alfred workflow to open GitHub repo URLs via a local workspace directory. No GitHub API access needed.
 
 ### [pdlog](https://github.com/DataProphet/pdlog)
 
@@ -130,10 +147,10 @@ With pdlog it's simple: instead of calling, say, `df.dropna()`, call `df.log.dro
 ### [Neural networks from scratch](https://github.com/seeM/nnet)
 
 A basic implementation of neural networks from scratch.
-Shortly after my encounter with reinforcement learning (see below), I realised that deep learning was an important precursor and shifted my studies there.
+Shortly after my encounter with reinforcement learning, I realised that deep learning was an important precursor and shifted my studies there.
 
 ### [Reinforcement learning from scratch](https://github.com/seeM/reinforcement-learning)
 
 Re-implementing sections of Sutton and Barto's [*Reinforcement Learning: An Introduction*](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf).
-My first inspiration in AI was the possibility that a computer could play games better than the best humans!
+My first inspiration in AI was the possibility that a computer could play games better than the best humans.
 I was determined to build one of these AIs myself.

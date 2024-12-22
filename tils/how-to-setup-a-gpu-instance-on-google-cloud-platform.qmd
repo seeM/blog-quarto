@@ -5,14 +5,14 @@ categories: [artificial intelligence]
 ---
 
 GCP is my current preferred cloud provider for GPU servers.
-I [compared prices last year](https://twitter.com/wasimlorgat/status/1524301276179312644?s=20) and found that GCP was the cheapest for lower-end GPUs.
+I compared prices last year and found that GCP was the cheapest for lower-end GPUs.
 The notebook servers offered Vertex AI are very easy to setup.
 They come with PyTorch and NVIDIA/CUDA drivers already configured.
 I also prefer options that give me full control over the instance via an SSH connection from my terminal, which this does.
 
-Depending on when you're reading this, these instructions may no longer be valid. Please [let me know](mailto:mwlorgat@gmail.com) if that's the case!
+Depending on when you're reading this, these instructions may no longer be valid. Please let me know in the comments below if that's the case!
 
-![Cloud GPU prices as of May 2022 ([via](https://twitter.com/wasimlorgat/status/1524301276179312644)).](images/cloud-gpu-prices.jpeg){.border .shadow-sm}
+![Cloud GPU prices as of May 2022.](images/cloud-gpu-prices.jpeg){.border .shadow-sm}
 
 ## Setup a GCP account
 

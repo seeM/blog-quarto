@@ -12,7 +12,7 @@ image: images/leci-nest-pas-une-pipe.png
 
 This is a lightning talk I gave at the satRday 2018 conference. In it, I share an epiphany I had about programming and how it relates to people and our ideas, after programming for most of my life and discovering higher-level languages like Python and R. The talk won best student lightning talk, which included a copy of the beautiful [R for Data Science](https://r4ds.hadley.nz/) signed by Hadley Wickham himself!
 
-Fast forward 4 years, and this realisation doesn't feel as profound as it once did, but that's okay. I believe the world would be a little better if everyone shared their personal learnings and experiences. Please [let me know](mailto:mwlorgat@gmail.com) of yours!
+Fast forward 4 years, and this realisation doesn't feel as profound as it once did, but that's okay. I believe the world would be a little better if everyone shared their personal learnings and experiences.
 
 Anyway, keep scrolling for a written version of the talk.
 

@@ -16,7 +16,7 @@ We're going to build a command line text editor from scratch in Python. If you'd
 
 If you prefer to play around with the final end-to-end solution, check out the [accompanying repo](https://github.com/seem/editor).
 
-One more thing, if you struggle to even get started, reach out to me on [twitter](https://twitter.com/wasimlorgat) or via [email](mailto:mwlorgat@gmail.com) and I'll try my best to help.
+One more thing, if you struggle to even get started, reach out in the discussion at the bottom of the page and I'll try my best to help.
 
 Let's dive right in!
 
@@ -685,7 +685,7 @@ And look at that! You've built a minimal yet functional text editor.
 
 ## What next?
 
-I hope you enjoyed working through this, and that you learned something new. If you did or if you have any other questions or comments, feel free to reach out to me on [twitter](https://twitter.com/wasimlorgat) or via [email](mailto:mwlorgat@gmail.com).
+I hope you enjoyed working through this, and that you learned something new. If you did or if you have any other questions or comments, feel free to reach out in the discussion at the bottom of the page.
 
 If this whet your appetite and you're looking for more, here are some exercises you might find interesting, in roughly increasing difficulty:
 

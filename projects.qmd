@@ -50,8 +50,6 @@ Here's the full stack:
 
 I tried to keep the implementation as simple as possible and I'm happy with the result. It took ~2 weeks to build and has been running seamlessly without my input ever since.
 
-Check out [this Twitter thread](https://twitter.com/wasimlorgat/status/1596038255236915200) for more details.
-
 ### [nbdev](https://nbdev.fast.ai)
 
 I'm a core developer of nbdev, an open source notebook-driven software development platform.
@@ -89,7 +87,7 @@ Inspired by the [dogsheep movement](https://dogsheep.github.io/), I built this f
 Save your personal data from CircleCI to a SQLite database.
 I threw this together for a quick analysis on build times at a former workplace, which we could then follow up with easy build pipeline optimisations.
 
-### [Reverse engineering ncode](https://twitter.com/wasimlorgat/status/1383275466727903234?s=20&t=5GZI4il1J7_pv57QApmIQA)
+### Reverse engineering ncode
 
 An attempt at reverse engineering ncode paper technology.
 I got all the way down from what looked like dots on paper to a matrix which I needed to decode.

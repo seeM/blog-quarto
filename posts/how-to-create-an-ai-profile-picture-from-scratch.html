@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="">
-<meta name="description" content="Recent notes on wasimlorgat.com">
+<meta name="author" content="Wasim Lorgat">
+<meta name="dcterms.date" content="2023-03-06">
 
-<title>Notes – Wasim Lorgat</title>
+<title>How to create your own AI avatar using HuggingFace Diffusers and Dreambooth – Wasim Lorgat</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,8 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../favicon.ico" rel="icon">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -43,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-4722a8983d6cc5d297256fb33f8efba1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-90c5cf6c381550ca13258ff336879ed1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6326d7280fcaea21636879fa2b376669.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,69 +69,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script defer="" data-api="https://meepo.shop/api/event" data-domain="wasimlorgat.com" src="https://meepo.shop/js/script.outbound-links.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="alternate" type="application/rss+xml" title="Wasim Lorgat" href="index.xml" data-external="1"><meta property="og:title" content="Notes">
-<meta property="og:description" content="Recent notes on wasimlorgat.com">
+<meta property="og:title" content="How to create your own AI avatar using HuggingFace Diffusers and Dreambooth">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://wasimlorgat.com/posts/images/dreambooth.png">
 <meta property="og:site_name" content="Wasim Lorgat">
 </head>
 
@@ -163,7 +104,7 @@ window.Quarto = {
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../tils/index.html" aria-current="page"> 
+    <a class="nav-link" href="../tils/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
 </ul>
@@ -188,83 +129,88 @@ window.Quarto = {
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Notes</h1></header>
+<main class="content" id="quarto-document-content">
 
-<header id="title-block-header">
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How to create your own AI avatar using HuggingFace Diffusers and Dreambooth</h1>
+  </div>
 
-<p class="author"></p>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Wasim Lorgat </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 6, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
 
 </header>
 
 
-<p>This is where I document and share some of my day-to-day learnings.</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table caption-top" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">Date</th>
-<th data-quarto-table-cell-role="th">Title</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr class="odd" data-index="0" data-listing-date-sort="1684713600000" data-listing-file-modified-sort="1734860265283" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="179" data-listing-title-sort="Using shot-scraper to automate screenshots for my writing" data-listing-filename-sort="using-shot-scraper.ipynb">
-<td><span class="listing-date">2023-05-22</span></td>
-<td><a href="../tils/using-shot-scraper.html" class="title listing-title">Using shot-scraper to automate screenshots for my writing</a></td>
-</tr>
-<tr class="even" data-index="1" data-categories="" data-listing-date-sort="1676246400000" data-listing-file-modified-sort="1734860265259" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="294" data-listing-title-sort="Callbacks vs async/await" data-listing-filename-sort="callbacks-vs-async-await.ipynb">
-<td><span class="listing-date">2023-02-13</span></td>
-<td><a href="../tils/callbacks-vs-async-await.html" class="title listing-title">Callbacks vs async/await</a></td>
-</tr>
-<tr class="odd" data-index="2" data-categories="YXJ0aWZpY2lhbCUyMGludGVsbGlnZW5jZQ==" data-listing-date-sort="1674432000000" data-listing-file-modified-sort="1734860265259" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="290" data-listing-title-sort="How to setup a GPU notebook server on Google Cloud Platform (GCP)" data-listing-filename-sort="how-to-setup-a-gpu-instance-on-google-cloud-platform.qmd">
-<td><span class="listing-date">2023-01-23</span></td>
-<td><a href="../tils/how-to-setup-a-gpu-instance-on-google-cloud-platform.html" class="title listing-title">How to setup a GPU notebook server on Google Cloud Platform (GCP)</a></td>
-</tr>
-<tr class="even" data-index="3" data-categories="dGVybWluYWw=" data-listing-date-sort="1671062400000" data-listing-file-modified-sort="1734860265259" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="148" data-listing-title-sort="How to share terminal demos as razor-sharp animated SVG" data-listing-filename-sort="how-to-share-terminal-demos-as-razor-sharp-animated-svg.qmd">
-<td><span class="listing-date">2022-12-15</span></td>
-<td><a href="../tils/how-to-share-terminal-demos-as-razor-sharp-animated-svg.html" class="title listing-title">How to share terminal demos as razor-sharp animated SVG</a></td>
-</tr>
-<tr class="odd" data-index="4" data-categories="cHl0aG9u" data-listing-date-sort="1657411200000" data-listing-file-modified-sort="1734860265259" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="714" data-listing-title-sort="Diagnosing an issue with plugin modules, process pools, and the import system" data-listing-filename-sort="diagnosing-an-issue-with-plugin-modules-process-pools-and-the-import-system.ipynb">
-<td><span class="listing-date">2022-07-10</span></td>
-<td><a href="../tils/diagnosing-an-issue-with-plugin-modules-process-pools-and-the-import-system.html" class="title listing-title">Diagnosing an issue with plugin modules, process pools, and the import system</a></td>
-</tr>
-<tr class="even" data-index="5" data-categories="bm90ZWJvb2tzJTJDcHl0aG9u" data-listing-date-sort="1657238400000" data-listing-file-modified-sort="1734860265267" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="61" data-listing-title-sort="Update fastai union annotations using ast" data-listing-filename-sort="update-fastai-union-annotations-using-ast.ipynb">
-<td><span class="listing-date">2022-07-08</span></td>
-<td><a href="../tils/update-fastai-union-annotations-using-ast.html" class="title listing-title">Update fastai union annotations using ast</a></td>
-</tr>
-<tr class="odd" data-index="6" data-categories="cHl0aG9u" data-listing-date-sort="1656892800000" data-listing-file-modified-sort="1734860265259" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="215" data-listing-title-sort="Compiling Python to C using setuptools and Cython" data-listing-filename-sort="compiling-python-to-c-using-setuptools-and-cython.ipynb">
-<td><span class="listing-date">2022-07-04</span></td>
-<td><a href="../tils/compiling-python-to-c-using-setuptools-and-cython.html" class="title listing-title">Compiling Python to C using setuptools and Cython</a></td>
-</tr>
-<tr class="even" data-index="7" data-categories="bm90ZWJvb2tz" data-listing-date-sort="1655942400000" data-listing-file-modified-sort="1734860265267" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="329" data-listing-title-sort="Point and click directory navigation inside a Jupyter notebook" data-listing-filename-sort="point-and-click-directory-navigation-inside-a-jupyter-notebook.ipynb">
-<td><span class="listing-date">2022-06-23</span></td>
-<td><a href="../tils/point-and-click-directory-navigation-inside-a-jupyter-notebook.html" class="title listing-title">Point and click directory navigation inside a Jupyter notebook</a></td>
-</tr>
-<tr class="odd" data-index="8" data-categories="bm90ZWJvb2tz" data-listing-date-sort="1655942400000" data-listing-file-modified-sort="1734860265259" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87" data-listing-title-sort="Creating a minimal custom Jupyter widget" data-listing-filename-sort="creating-a-minimal-custom-jupyter-widget.ipynb">
-<td><span class="listing-date">2022-06-23</span></td>
-<td><a href="../tils/creating-a-minimal-custom-jupyter-widget.html" class="title listing-title">Creating a minimal custom Jupyter widget</a></td>
-</tr>
-<tr class="even" data-index="9" data-categories="bm90ZWJvb2tz" data-listing-date-sort="1655856000000" data-listing-file-modified-sort="1734860265259" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="187" data-listing-title-sort="Create and execute cells inside a Jupyter notebook" data-listing-filename-sort="create-and-execute-cells-inside-a-jupyter-notebook.ipynb">
-<td><span class="listing-date">2022-06-22</span></td>
-<td><a href="../tils/create-and-execute-cells-inside-a-jupyter-notebook.html" class="title listing-title">Create and execute cells inside a Jupyter notebook</a></td>
-</tr>
-<tr class="odd" data-index="10" data-categories="cGVsaWNhbg==" data-listing-date-sort="1655769600000" data-listing-file-modified-sort="1734860265267" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="425" data-listing-title-sort="Setting up TILs in Pelican" data-listing-filename-sort="setting-up-tils-in-pelican.ipynb">
-<td><span class="listing-date">2022-06-21</span></td>
-<td><a href="../tils/setting-up-tils-in-pelican.html" class="title listing-title">Setting up TILs in Pelican</a></td>
-</tr>
-<tr class="even" data-index="11" data-categories="cGVsaWNhbg==" data-listing-date-sort="1655683200000" data-listing-file-modified-sort="1734860265267" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="601" data-listing-title-sort="Using Pelican as a library" data-listing-filename-sort="using-pelican-as-a-library.ipynb">
-<td><span class="listing-date">2022-06-20</span></td>
-<td><a href="../tils/using-pelican-as-a-library.html" class="title listing-title">Using Pelican as a library</a></td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
+<p>I’m super impressed with the quality of Dreambooth using <a href="https://huggingface.co/docs/diffusers/training/dreambooth">HuggingFace Diffusers</a> 🚀 — with only 14 images of myself! These four images are created by Stable Diffusion using the same fine-tuned model with different prompts:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dreambooth.png" class="img-fluid figure-img" width="600"></p>
+<figcaption>Four AI-generated pictures of me.</figcaption>
+</figure>
 </div>
-</div></main> <!-- /main -->
+<p>Here are a few details that made the difference for me:</p>
+<ol type="1">
+<li><p><strong>High-quality data:</strong> As always, the most crucial element is data. I got away with very few images, but quality is important. I used:</p>
+<ul>
+<li>14 images</li>
+<li>Captured around the same time, therefore same facial structure, hairstyle, etc</li>
+<li>Cropped to head &amp; shoulders</li>
+<li>I was the only subject</li>
+</ul></li>
+<li><p><strong>Avoid overfitting:</strong> Second most important is to avoid overfitting. I used:</p>
+<ul>
+<li>Prior preservation loss with 90 high quality portraits scraped from Pexel via the <a href="https://huggingface.co/datasets/yuvalkirstain/portrait_dreambooth"><code>yuvalkirstain/portrait_dreambooth</code></a> HuggingFace dataset</li>
+<li>Low learning rate (1e-6)</li>
+<li>Low training step count (300) – adjust this based on how many images you have</li>
+</ul></li>
+<li><p><strong>Train the text encoder:</strong> In addition to the U-Net. I needed to use a few of the supported memory optimization features to run this on a 16GB GPU:</p>
+<ul>
+<li><a href="https://github.com/facebookresearch/xformers">Xformers’</a> efficient attention – had to build from source, prebuilt didn’t work</li>
+<li><a href="https://github.com/huggingface/accelerate">HuggingFace Accelerate’s</a> gradient accumulation</li>
+<li><a href="https://github.com/facebookresearch/bitsandbytes">Bitsandbytes’</a> 8bit adam</li>
+</ul></li>
+<li><p><strong>High-quality prompts:</strong> If you do all of the above perfectly, you still won’t get great results without high quality prompts. I’m not a prompt guru myself, so I took from the excellent prompts curated at <a href="https://publicprompts.art/">PublicPrompts</a> as well as <a href="https://lexica.art">Lexica</a>.</p>
+<p>Even with great prompts, it is a struggle to get it to deviate from the training set. I had to tweak the order of words, and try adding and removing certain words to get it to work. For some reason, adding “Hypnotic illustration” to the start of the prompt worked consistently 🤷🏽‍♂️.</p></li>
+</ol>
+<p>Please don’t hestitate to share any questions or comments below.</p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Here are the exact prompts I used for each of the above images:</p>
+<ul>
+<li><strong>Top-left:</strong> a photo of &lt;dreambooth token&gt;</li>
+<li><strong>Top-right:</strong> Hypnotic illustration of &lt;dreambooth token&gt;, hypnotic psychedelic art by Dan Mumford, pop surrealism, dark glow neon paint, mystical, Behance (<a href="https://publicprompts.art/psychedelic-pop-art/">PublicPrompts source</a>)</li>
+<li><strong>Bottom-left:</strong> Hypnotic illustration of &lt;dreambooth token&gt;, anime illustration by makoto shinkai, stanley artgerm lau, wlop, rossdraws, concept art, digital painting (<a href="https://publicprompts.art/hyper-realistic-anime-portraits/">PublicPrompts source</a>)</li>
+<li><strong>Bottom-right:</strong> Toy Story’s Woody as &lt;dreambooth token&gt;, 4k, artstation, cgsociety, award-winning, masterpiece, stunning, beautiful, glorious, powerful, fantasy art by Greg Rutkowski, octane render, unreal engine, high (<a href="https://lexica.art/prompt/6c0dd61e-3d90-49ac-b32f-07f19b1a7d84">Lexica source</a>)</li>
+</ul>
+<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script>
   let links = document.querySelectorAll("a[data-analytics]");
   for (var i = 0; i < links.length; i++) {
@@ -711,9 +657,58 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+function loadGiscusWhenReady() {
+  // Function to get the theme based on body class
+  const getTheme = () => {
+    const baseTheme = document.getElementById('giscus-base-theme').value;
+    const altTheme = document.getElementById('giscus-alt-theme').value;
+    return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+  };
+  // Create the Giscus script and add it to the desired location
+  const loadGiscus = () => {
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "seem/blog";
+    script.dataset.repoId = "R_kgDOIBWk3A";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOIBWk3M4CSSa6";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  };
+  // MutationObserver to detect when the 'quarto-light' or 'quarto-dark' class is added to the body
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (mutation.type === "attributes" && mutation.attributeName === "class") {
+        if (document.body.classList.contains('quarto-light') || document.body.classList.contains('quarto-dark')) {
+          loadGiscus();
+          observer.disconnect(); // Stop observing once Giscus is loaded
+          break;
+        }
+      }
+    }
+  });
+  // Start observing the body for class attribute changes
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+}
+loadGiscusWhenReady();
+</script>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/seem/blog/edit/main/tils/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/seem/blog/blob/main/tils/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/seem/blog/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/seem/blog/edit/main/posts/how-to-create-an-ai-profile-picture-from-scratch.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/seem/blog/blob/main/posts/how-to-create-an-ai-profile-picture-from-scratch.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/seem/blog/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

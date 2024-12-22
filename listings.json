@@ -3,9 +3,7 @@
     "listing": "/tils/index.html",
     "items": [
       "/tils/using-shot-scraper.html",
-      "/tils/how-to-create-an-ai-profile-picture-from-scratch.html",
       "/tils/callbacks-vs-async-await.html",
-      "/tils/how-to-use-nstableview-in-swiftui.html",
       "/tils/how-to-setup-a-gpu-instance-on-google-cloud-platform.html",
       "/tils/how-to-share-terminal-demos-as-razor-sharp-animated-svg.html",
       "/tils/diagnosing-an-issue-with-plugin-modules-process-pools-and-the-import-system.html",
@@ -23,6 +21,8 @@
     "items": [
       "/posts/image-vector-search.html",
       "/posts/jupytercon-2023.html",
+      "/posts/how-to-create-an-ai-profile-picture-from-scratch.html",
+      "/posts/how-to-use-nstableview-in-swiftui.html",
       "/posts/how-to-build-your-own-minimal-jupyter-frontend.html",
       "/posts/math-of-diffusion.html",
       "/posts/fastai-array-programming-day-1.html",

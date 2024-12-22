@@ -270,7 +270,7 @@
     "href": "tils/index.html",
     "title": "Notes",
     "section": "",
-    "text": "This is where I document and share some of my day-to-day learnings.\n\n\n\n\n\n\n\n\nDate\nTitle\n\n\n\n\n2023-05-22\nUsing shot-scraper to automate screenshots for my writing\n\n\n2023-03-06\nHow to create your own AI avatar using HuggingFace Diffusers and Dreambooth\n\n\n2023-02-13\nCallbacks vs async/await\n\n\n2023-01-25\nHow to use NSTableView in SwiftUI\n\n\n2023-01-23\nHow to setup a GPU notebook server on Google Cloud Platform (GCP)\n\n\n2022-12-15\nHow to share terminal demos as razor-sharp animated SVG\n\n\n2022-07-10\nDiagnosing an issue with plugin modules, process pools, and the import system\n\n\n2022-07-08\nUpdate fastai union annotations using ast\n\n\n2022-07-04\nCompiling Python to C using setuptools and Cython\n\n\n2022-06-23\nPoint and click directory navigation inside a Jupyter notebook\n\n\n2022-06-23\nCreating a minimal custom Jupyter widget\n\n\n2022-06-22\nCreate and execute cells inside a Jupyter notebook\n\n\n2022-06-21\nSetting up TILs in Pelican\n\n\n2022-06-20\nUsing Pelican as a library\n\n\n\n\nNo matching items"
+    "text": "This is where I document and share some of my day-to-day learnings.\n\n\n\n\n\n\n\n\nDate\nTitle\n\n\n\n\n2023-05-22\nUsing shot-scraper to automate screenshots for my writing\n\n\n2023-02-13\nCallbacks vs async/await\n\n\n2023-01-23\nHow to setup a GPU notebook server on Google Cloud Platform (GCP)\n\n\n2022-12-15\nHow to share terminal demos as razor-sharp animated SVG\n\n\n2022-07-10\nDiagnosing an issue with plugin modules, process pools, and the import system\n\n\n2022-07-08\nUpdate fastai union annotations using ast\n\n\n2022-07-04\nCompiling Python to C using setuptools and Cython\n\n\n2022-06-23\nPoint and click directory navigation inside a Jupyter notebook\n\n\n2022-06-23\nCreating a minimal custom Jupyter widget\n\n\n2022-06-22\nCreate and execute cells inside a Jupyter notebook\n\n\n2022-06-21\nSetting up TILs in Pelican\n\n\n2022-06-20\nUsing Pelican as a library\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "tils/creating-a-minimal-custom-jupyter-widget.html",
@@ -320,20 +320,6 @@
     "title": "Diagnosing an issue with plugin modules, process pools, and the import system",
     "section": "Changes to imported modules persist across IPython InteractiveShells",
     "text": "Changes to imported modules persist across IPython InteractiveShells\nWhy is any of the above a problem? Didn’t we say that nbprocess_test creates a separate shell for each notebook? Yes it does, but it turns out that changes to imported modules persist across shells.\n\nfrom execnb.shell import CaptureShell\n\nFirst make sure that CaptureShell doesn’t have a foo attribute - this will make sense in a second:\n\nassert not hasattr(CaptureShell, 'foo')\n\nNow add the foo attribute:\n\nCaptureShell.foo = 'bar'\n\nWe can see foo inside a CaptureShell:\n\nshell = CaptureShell()\nshell.run('from execnb.shell import CaptureShell; CaptureShell.foo')\nshell.result\n\n'bar'\n\n\nThis happens because when we first imported from the execnb.shell module it was cached in sys.modules:\n\nimport sys\n\nsys.modules['execnb.shell']\n\n&lt;module 'execnb.shell' from '/Users/seem/code/execnb/execnb/shell.py'&gt;\n\n\nIn fact, sys.modules['execnb.shell'].CaptureShell is another name for CaptureShell:\n\nsys.modules['execnb.shell'].CaptureShell is CaptureShell\n\nTrue\n\n\nPython caches imports to speed up consecutive imports from the same modules. InteractiveShell (and its sub-classes) have the same sys.modules which causes this behaviour:\n\nshell = CaptureShell()\nshell.run(\"import sys; sys.modules['execnb.shell'].CaptureShell.foo\")\nshell.result\n\n'bar'\n\n\nexec with empty globals and locals uses the same sys.modules too so it doesn’t avoid the issue:\n\nexec(\"import sys; print('execnb.shell' in sys.modules)\", {}, {})\n\nTrue\n\n\n\nexec(\"from execnb.shell import CaptureShell; print(CaptureShell.foo)\", {}, {})\n\nbar\n\n\n\nIn the end, we agreed that the test itself was broken, because it made assumptions about its environment without ensuring that they were true. Tests like this may fail - regardless of the above behaviour - if we import any module that registers a callback. For example, this fails too:\nfrom fastai.callback.progress import *\nfrom nbprocess.test import test_nb\n\ntest_nb('nbs/nb_with_failing_test.ipynb')\nThe fix is to explicitly run learner.fit with the precise list of callbacks required."
-  },
-  {
-    "objectID": "tils/how-to-create-an-ai-profile-picture-from-scratch.html",
-    "href": "tils/how-to-create-an-ai-profile-picture-from-scratch.html",
-    "title": "How to create your own AI avatar using HuggingFace Diffusers and Dreambooth",
-    "section": "",
-    "text": "I’m super impressed with the quality of Dreambooth using HuggingFace Diffusers 🚀 — with only 14 images of myself! These four images are created by Stable Diffusion using the same fine-tuned model with different prompts:1\nHere are a few details that made the difference for me:\nPlease don’t hestitate to share any questions or comments below."
-  },
-  {
-    "objectID": "tils/how-to-create-an-ai-profile-picture-from-scratch.html#footnotes",
-    "href": "tils/how-to-create-an-ai-profile-picture-from-scratch.html#footnotes",
-    "title": "How to create your own AI avatar using HuggingFace Diffusers and Dreambooth",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nHere are the exact prompts I used for each of the above images:\n\nTop-left: a photo of &lt;dreambooth token&gt;\nTop-right: Hypnotic illustration of &lt;dreambooth token&gt;, hypnotic psychedelic art by Dan Mumford, pop surrealism, dark glow neon paint, mystical, Behance (PublicPrompts source)\nBottom-left: Hypnotic illustration of &lt;dreambooth token&gt;, anime illustration by makoto shinkai, stanley artgerm lau, wlop, rossdraws, concept art, digital painting (PublicPrompts source)\nBottom-right: Toy Story’s Woody as &lt;dreambooth token&gt;, 4k, artstation, cgsociety, award-winning, masterpiece, stunning, beautiful, glorious, powerful, fantasy art by Greg Rutkowski, octane render, unreal engine, high (Lexica source)\n\n↩︎"
   },
   {
     "objectID": "tils/point-and-click-directory-navigation-inside-a-jupyter-notebook.html",
@@ -418,20 +404,6 @@
     "title": "How to share terminal demos as razor-sharp animated SVG",
     "section": "",
     "text": "Install asciinema and svg-term-cli.\nRecord with asciinema:\nasciinema rec demo.cast\nThis records the session in the asciicast v2 plaintext file format (newline-delimited JSON with an initial header object followed by a timestamped event stream of stdin and stdout).\nConvert the .cast file to .svg with svg-term-cli:\nsvg-term --in demo.cast --out demo.svg --window --width 80 --height 22 --no-optimize\n\nYou probably want to play around with width and height\nwindow adds a fake OS window around the terminal session\nI found that no-optimize fixed some weird font rendering issues on my macOS – not sure why\n\n\n\nHere’s an example I created for my blog post Build a text editor with Python and curses:"
-  },
-  {
-    "objectID": "tils/how-to-use-nstableview-in-swiftui.html",
-    "href": "tils/how-to-use-nstableview-in-swiftui.html",
-    "title": "How to use NSTableView in SwiftUI",
-    "section": "",
-    "text": "I recently started learning macOS development using SwiftUI as part of my latest project: building a macOS Jupyter frontend. While I’m loving Swift (the language) and SwiftUI (the UI framework), it’s sometimes extremely difficult to find out information that feels like it should be readily available.\nThe latest such case is how to use an NSTableView in SwiftUI. SwiftUI’s new List is great for iOS and multiplatform apps, but doesn’t seem to be designed for desktop-specific apps which can do with much more information-dense UIs.\nSwiftUI has the newer Table too, but it’s also quite limited at this stage. For example, I don’t think it’s possible to make an entire row clickable.\nThis left me wanting to try out the much more battle-tested NSTableView – but as an Apple dev noob, I couldn’t get a minimal example up and running after a few hours of tinkering!\n… So here’s a snippet you can copy paste.1 Keep reading below if you’d like to see how it works step-by-step.\nStep-by-step:\nCreate your table view struct, conforming to NSViewRepresentable. This is a standard way of using AppKit/UIKit views in your SwiftUI applications.\nIn makeNSView, create the NSTableView with a single column, and leave updateNSView blank for now:\nCreate a Coordinator, subclassing:\nImplement makeCoordinator, returning an instance of Coordinator, then link it to the table view in makeNSView:\nYou still won’t see anything being rendered yet, since we still need to implement NSTableViewDelegate and NSTableViewDataSource methods.\nFor this minimal example, we’ll use a simple static array of strings defined right in the coordinator, although in practice you would probably get data from the view.\nImplement NSTableViewDataSource’s numberOfRows and NSTableViewDelegate’s tableView(tableView:viewFor:row). The former returns the length of our array. The latter returns an NSTextField created from the corresponding row of data.\nThat’s it! This is the minimal implementation of an NSTableView in SwiftUI that I could find. Let me know via the GitHub discussion below if you have any comments or suggestions.\nHere are some next steps I have in mind:\nLet me know if you’d find these helpful!"
-  },
-  {
-    "objectID": "tils/how-to-use-nstableview-in-swiftui.html#footnotes",
-    "href": "tils/how-to-use-nstableview-in-swiftui.html#footnotes",
-    "title": "How to use NSTableView in SwiftUI",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nMany thanks to Alex Grebenyuk whose article and repo I heavily referenced to figure this out.↩︎"
   },
   {
     "objectID": "tils/update-fastai-union-annotations-using-ast.html",
@@ -530,6 +502,34 @@
     "title": "Wasim Lorgat",
     "section": "Recent posts",
     "text": "Recent posts"
+  },
+  {
+    "objectID": "posts/how-to-create-an-ai-profile-picture-from-scratch.html",
+    "href": "posts/how-to-create-an-ai-profile-picture-from-scratch.html",
+    "title": "How to create your own AI avatar using HuggingFace Diffusers and Dreambooth",
+    "section": "",
+    "text": "I’m super impressed with the quality of Dreambooth using HuggingFace Diffusers 🚀 — with only 14 images of myself! These four images are created by Stable Diffusion using the same fine-tuned model with different prompts:1\nHere are a few details that made the difference for me:\nPlease don’t hestitate to share any questions or comments below."
+  },
+  {
+    "objectID": "posts/how-to-create-an-ai-profile-picture-from-scratch.html#footnotes",
+    "href": "posts/how-to-create-an-ai-profile-picture-from-scratch.html#footnotes",
+    "title": "How to create your own AI avatar using HuggingFace Diffusers and Dreambooth",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nHere are the exact prompts I used for each of the above images:\n\nTop-left: a photo of &lt;dreambooth token&gt;\nTop-right: Hypnotic illustration of &lt;dreambooth token&gt;, hypnotic psychedelic art by Dan Mumford, pop surrealism, dark glow neon paint, mystical, Behance (PublicPrompts source)\nBottom-left: Hypnotic illustration of &lt;dreambooth token&gt;, anime illustration by makoto shinkai, stanley artgerm lau, wlop, rossdraws, concept art, digital painting (PublicPrompts source)\nBottom-right: Toy Story’s Woody as &lt;dreambooth token&gt;, 4k, artstation, cgsociety, award-winning, masterpiece, stunning, beautiful, glorious, powerful, fantasy art by Greg Rutkowski, octane render, unreal engine, high (Lexica source)\n\n↩︎"
+  },
+  {
+    "objectID": "posts/how-to-use-nstableview-in-swiftui.html",
+    "href": "posts/how-to-use-nstableview-in-swiftui.html",
+    "title": "How to use NSTableView in SwiftUI",
+    "section": "",
+    "text": "I recently started learning macOS development using SwiftUI as part of my latest project: building a macOS Jupyter frontend. While I’m loving Swift (the language) and SwiftUI (the UI framework), it’s sometimes extremely difficult to find out information that feels like it should be readily available.\nThe latest such case is how to use an NSTableView in SwiftUI. SwiftUI’s new List is great for iOS and multiplatform apps, but doesn’t seem to be designed for desktop-specific apps which can do with much more information-dense UIs.\nSwiftUI has the newer Table too, but it’s also quite limited at this stage. For example, I don’t think it’s possible to make an entire row clickable.\nThis left me wanting to try out the much more battle-tested NSTableView – but as an Apple dev noob, I couldn’t get a minimal example up and running after a few hours of tinkering!\n… So here’s a snippet you can copy paste.1 Keep reading below if you’d like to see how it works step-by-step.\nStep-by-step:\nCreate your table view struct, conforming to NSViewRepresentable. This is a standard way of using AppKit/UIKit views in your SwiftUI applications.\nIn makeNSView, create the NSTableView with a single column, and leave updateNSView blank for now:\nCreate a Coordinator, subclassing:\nImplement makeCoordinator, returning an instance of Coordinator, then link it to the table view in makeNSView:\nYou still won’t see anything being rendered yet, since we still need to implement NSTableViewDelegate and NSTableViewDataSource methods.\nFor this minimal example, we’ll use a simple static array of strings defined right in the coordinator, although in practice you would probably get data from the view.\nImplement NSTableViewDataSource’s numberOfRows and NSTableViewDelegate’s tableView(tableView:viewFor:row). The former returns the length of our array. The latter returns an NSTextField created from the corresponding row of data.\nThat’s it! This is the minimal implementation of an NSTableView in SwiftUI that I could find. Let me know via the GitHub discussion below if you have any comments or suggestions.\nHere are some next steps I have in mind:\nLet me know if you’d find these helpful!"
+  },
+  {
+    "objectID": "posts/how-to-use-nstableview-in-swiftui.html#footnotes",
+    "href": "posts/how-to-use-nstableview-in-swiftui.html#footnotes",
+    "title": "How to use NSTableView in SwiftUI",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nMany thanks to Alex Grebenyuk whose article and repo I heavily referenced to figure this out.↩︎"
   },
   {
     "objectID": "posts/code-neq-idea.html",

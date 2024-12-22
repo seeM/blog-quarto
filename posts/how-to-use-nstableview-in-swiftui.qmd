@@ -3,6 +3,8 @@ title: How to use NSTableView in SwiftUI
 description: ""
 date: 2023-01-25
 categories: [swift]
+aliases:
+    - /tils/how-to-use-nstableview-in-swiftui.html
 ---
 
 I recently started learning macOS development using SwiftUI as part of my latest project: building a macOS Jupyter frontend. While I'm loving Swift (the language) and SwiftUI (the UI framework), it's sometimes extremely difficult to find out information that feels like it should be readily available.

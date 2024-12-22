@@ -3,6 +3,8 @@ title: How to create your own AI avatar using HuggingFace Diffusers and Dreamboo
 date: 2023-03-06
 categories: [artificial intelligence]
 image: images/dreambooth.png
+aliases:
+    - /tils/how-to-create-an-ai-profile-picture-from-scratch.html
 ---
 
 I'm super impressed with the quality of Dreambooth using [HuggingFace Diffusers](https://huggingface.co/docs/diffusers/training/dreambooth) 🚀 --- with only 14 images of myself! These four images are created by Stable Diffusion using the same fine-tuned model with different prompts:[^prompts]

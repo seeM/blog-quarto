@@ -17,7 +17,7 @@ Click on a project's heading to go to its website/repo.
 
 I'm currently working on [Positron](https://positron.posit.co/), a next-generation data science IDE by [Posit](https://posit.co/).
 
-![A screenshot of a typical Positron session.](https://positron.posit.co/images/astropy.png)
+![A screenshot of a typical Positron session ([via](https://positron.posit.co/images/astropy.png)).](images/positron.png)
 
 ## 2023
 

@@ -9,7 +9,7 @@
 <link>https://wasimlorgat.com/</link>
 <atom:link href="https://wasimlorgat.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of technical blogs and talks on software engineering and machine learning.</description>
-<generator>quarto-1.7.2</generator>
+<generator>quarto-1.7.5</generator>
 <lastBuildDate>Tue, 23 May 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Building a cost-effective image vector search engine with CLIP</title>
@@ -864,7 +864,7 @@ Why use a Virtual Private Server(VPS) instead of a modern platform as a service 
 <section id="your-turn" class="level2">
 <h2 class="anchored" data-anchor-id="your-turn">Your turn</h2>
 <p>Why not have a go at it yourself? 😄 Dive into <a href="https://github.com/seeM/blog/blob/main/posts/image-vector-search.ipynb">the accompanying notebook</a> for this post, give it a try with your own dataset, deploy the result, and share what you create!</p>
-<p><strong>If you found this enjoyable, consider giving it a thumbs up below, commenting, and following me at <a href="https://twitter.com/wasimlorgat"><span class="citation" data-cites="wasimlorgat">@wasimlorgat</span> on Twitter</a>. The positive feedback really helps me get a sense of what readers find valuable!</strong></p>
+<p><strong>If you found this enjoyable, consider giving it a thumbs up and commenting below. The positive feedback really helps me get a sense of what readers find valuable!</strong></p>
 <hr>
 <p><em>Many thanks to <a href="https://kurianbenoy.com/">Kurian Benoy</a>, <a href="https://www.fast.ai/">Jeremy Howard</a>, <a href="https://twitter.com/pcuenq">Pedro Cuenca</a>, and <a href="https://forbo7.github.io/">Salman Naqvi</a>, for their kind and thoughtful comments on various versions of this post.</em></p>
 
@@ -936,7 +936,7 @@ Why use a Virtual Private Server(VPS) instead of a modern platform as a service 
 </figure>
 </div>
 <p>This blog post (and the <a href="https://github.com/seeM/blog/blob/main/posts/jupyter-server-a-whirlwind-tour.ipynb">source notebook</a>) is an executable playground for understanding how to communicate with Jupyter Servers. You can think of it as a barebones Jupyter frontend, since we’ll be implementing the full lifecycle including creating a new notebook, writing and executing code cells, and shutting down the server.</p>
-<p>I’m <a href="https://twitter.com/wasimlorgat/status/1611615676220817415?s=20">building my own native macOS Jupyter frontend</a> and writing about my experience and learnings along the way. In order to do that, I need to be familiar with how Jupyter Servers works.</p>
+<p>I’m building my own native macOS Jupyter frontend and writing about my experience and learnings along the way. In order to do that, I need to be familiar with how Jupyter Servers works.</p>
 <p>My approach to learning this was a combination of using Chrome dev tools to inspect network requests in Jupyter Lab, and reading the wonderful Jupyter Server docs (particularly the <a href="https://jupyter-server.readthedocs.io/en/latest/developers/rest-api.html">REST API reference</a>). I’ll include links to the relevant docs in each section below.</p>
 <p>Let’s get started!</p>
 <section id="starting-the-server" class="level2">
@@ -1827,7 +1827,7 @@ Sohl-Dickstein, Jascha, Eric A. Weiss, Niru Maheswaranathan, and Surya Ganguli. 
 
 
 
-<p>Here are my notes for day 1 of the FastAI array programming study group run by Jeremy Howard. Check out <a href="https://forums.fast.ai/t/apl-array-programming/97188">the official thread on the FastAI forum</a> for up-to-date info. Any mistakes are mine - please <a href="https://twitter.com/wasimlorgat">let me know</a> if you spot one.</p>
+<p>Here are my notes for day 1 of the FastAI array programming study group run by Jeremy Howard. Check out <a href="https://forums.fast.ai/t/apl-array-programming/97188">the official thread on the FastAI forum</a> for up-to-date info. Any mistakes are mine - please let me know if you spot one.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://wasimlorgat.com/posts/images/juggling.svg" class="img-fluid figure-img" width="200"></p>
@@ -1872,7 +1872,7 @@ Sohl-Dickstein, Jascha, Eric A. Weiss, Niru Maheswaranathan, and Surya Ganguli. 
 </figure>
 </div>
 <p>You should now be able to write Dyalog directly in your notebook! Try it out:</p>
-<div id="756784ba" class="cell">
+<div id="756784ba" class="cell" data-vscode="{&quot;languageId&quot;:&quot;apl&quot;}">
 <pre class="apl cell-code"><code>1 2 3 - 4 5 6</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">¯3 ¯3 ¯3
@@ -1910,7 +1910,7 @@ Sohl-Dickstein, Jascha, Eric A. Weiss, Niru Maheswaranathan, and Surya Ganguli. 
 </div>
 <p>A good way to learn new concepts in APL (and in general) is to look at an example, try to predict what it’ll do before you run it, then run it and compare with your prediction. APL documentation is filled with examples which makes this approach even more powerful. The documentation will often include multiple examples as separate elements of an array.</p>
 <p>For example, you should read the example for <a href="https://help.dyalog.com/latest/index.htm#Language/Symbols/Minus%20Sign.htm">negate</a>:</p>
-<div id="d3eed468" class="cell">
+<div id="d3eed468" class="cell" data-vscode="{&quot;languageId&quot;:&quot;apl&quot;}">
 <pre class="apl cell-code"><code>- 3.2 ¯7 0</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">¯3.2 7 0
@@ -1918,21 +1918,21 @@ Sohl-Dickstein, Jascha, Eric A. Weiss, Niru Maheswaranathan, and Surya Ganguli. 
 </div>
 </div>
 <p>as three examples:</p>
-<div id="80432a06" class="cell">
+<div id="80432a06" class="cell" data-vscode="{&quot;languageId&quot;:&quot;apl&quot;}">
 <pre class="apl cell-code"><code>- 3.2</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">¯3.2
 </span>
 </div>
 </div>
-<div id="b7104b05" class="cell">
+<div id="b7104b05" class="cell" data-vscode="{&quot;languageId&quot;:&quot;apl&quot;}">
 <pre class="apl cell-code"><code>- ¯7</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">7
 </span>
 </div>
 </div>
-<div id="4acfbbea" class="cell">
+<div id="4acfbbea" class="cell" data-vscode="{&quot;languageId&quot;:&quot;apl&quot;}">
 <pre class="apl cell-code"><code>- 0</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">0
@@ -1993,7 +1993,7 @@ Sohl-Dickstein, Jascha, Eric A. Weiss, Niru Maheswaranathan, and Surya Ganguli. 
 </div>
 <p>We’re going to build a command line text editor from scratch in Python. If you’d like to learn the most out of this, I’d recommend to code along. When we encounter problems, I’ll try to state them first before suggesting a solution. I encourage you to pause and give yourself about fifteen minutes to try to solve it first. If you’re still stuck, move along and compare the solution with your own approach. It’s also totally fine if you simply read through at your leisure.</p>
 <p>If you prefer to play around with the final end-to-end solution, check out the <a href="https://github.com/seem/editor">accompanying repo</a>.</p>
-<p>One more thing, if you struggle to even get started, reach out to me on <a href="https://twitter.com/wasimlorgat">twitter</a> or via <a href="mailto:mwlorgat@gmail.com">email</a> and I’ll try my best to help.</p>
+<p>One more thing, if you struggle to even get started, reach out in the discussion at the bottom of the page and I’ll try my best to help.</p>
 <p>Let’s dive right in!</p>
 <section id="create-a-curses-application" class="level2">
 <h2 class="anchored" data-anchor-id="create-a-curses-application">Create a curses application</h2>
@@ -4117,7 +4117,7 @@ font-style: inherit;"># ...</span></span></code></pre></div>
 </section>
 <section id="what-next" class="level2">
 <h2 class="anchored" data-anchor-id="what-next">What next?</h2>
-<p>I hope you enjoyed working through this, and that you learned something new. If you did or if you have any other questions or comments, feel free to reach out to me on <a href="https://twitter.com/wasimlorgat">twitter</a> or via <a href="mailto:mwlorgat@gmail.com">email</a>.</p>
+<p>I hope you enjoyed working through this, and that you learned something new. If you did or if you have any other questions or comments, feel free to reach out in the discussion at the bottom of the page.</p>
 <p>If this whet your appetite and you’re looking for more, here are some exercises you might find interesting, in roughly increasing difficulty:</p>
 <ol type="1">
 <li>Remap cursor movement to <code>Ctrl-p</code> (up), <code>Ctrl-n</code> (down), <code>Ctrl-b</code> (left), and <code>Ctrl-f</code> (right).</li>
@@ -4333,7 +4333,7 @@ font-style: inherit;">=</span> df.log.dropna()</span></code></pre></div>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/o8-IuUMG2T8" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p><em>(The original title and description of the talk changed between the pitch and final version, hence the differences.)</em></p>
 <p>This is a lightning talk I gave at the satRday 2018 conference. In it, I share an epiphany I had about programming and how it relates to people and our ideas, after programming for most of my life and discovering higher-level languages like Python and R. The talk won best student lightning talk, which included a copy of the beautiful <a href="https://r4ds.hadley.nz/">R for Data Science</a> signed by Hadley Wickham himself!</p>
-<p>Fast forward 4 years, and this realisation doesn’t feel as profound as it once did, but that’s okay. I believe the world would be a little better if everyone shared their personal learnings and experiences. Please <a href="mailto:mwlorgat@gmail.com">let me know</a> of yours!</p>
+<p>Fast forward 4 years, and this realisation doesn’t feel as profound as it once did, but that’s okay. I believe the world would be a little better if everyone shared their personal learnings and experiences.</p>
 <p>Anyway, keep scrolling for a written version of the talk.</p>
 <section id="my-journey-from-game-maker-to-python" class="level2">
 <h2 class="anchored" data-anchor-id="my-journey-from-game-maker-to-python">My journey from Game Maker to Python <img src="https://wasimlorgat.com/posts/images/code-represents-the-ideas-of-people-1.png" class="img-fluid"></h2>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.2">
+<meta name="generator" content="quarto-1.7.5">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b5f7554119bf71d72592b7584c7a43b5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4722a8983d6cc5d297256fb33f8efba1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0344d4fe0a7a2d6f1e2204bfd79d82c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6326d7280fcaea21636879fa2b376669.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -117,16 +117,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="https://github.com/seem"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../index.xml"> <i class="bi bi-rss" role="img">
-</i> 
-<span class="menu-text">Posts</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../tils/index.xml"> <i class="bi bi-rss" role="img">
-</i> 
-<span class="menu-text">TILs</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -204,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Here are my notes for day 1 of the FastAI array programming study group run by Jeremy Howard. Check out <a href="https://forums.fast.ai/t/apl-array-programming/97188">the official thread on the FastAI forum</a> for up-to-date info. Any mistakes are mine - please <a href="https://twitter.com/wasimlorgat">let me know</a> if you spot one.</p>
+<p>Here are my notes for day 1 of the FastAI array programming study group run by Jeremy Howard. Check out <a href="https://forums.fast.ai/t/apl-array-programming/97188">the official thread on the FastAI forum</a> for up-to-date info. Any mistakes are mine - please let me know if you spot one.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/juggling.svg" class="img-fluid figure-img" width="200"></p>
@@ -249,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>You should now be able to write Dyalog directly in your notebook! Try it out:</p>
-<div id="756784ba" class="cell">
+<div id="756784ba" class="cell" data-vscode="{&quot;languageId&quot;:&quot;apl&quot;}">
 <pre class="apl cell-code"><code>1 2 3 - 4 5 6</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">¯3 ¯3 ¯3
@@ -287,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>A good way to learn new concepts in APL (and in general) is to look at an example, try to predict what it’ll do before you run it, then run it and compare with your prediction. APL documentation is filled with examples which makes this approach even more powerful. The documentation will often include multiple examples as separate elements of an array.</p>
 <p>For example, you should read the example for <a href="https://help.dyalog.com/latest/index.htm#Language/Symbols/Minus%20Sign.htm">negate</a>:</p>
-<div id="d3eed468" class="cell">
+<div id="d3eed468" class="cell" data-vscode="{&quot;languageId&quot;:&quot;apl&quot;}">
 <pre class="apl cell-code"><code>- 3.2 ¯7 0</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">¯3.2 7 0
@@ -295,21 +285,21 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>as three examples:</p>
-<div id="80432a06" class="cell">
+<div id="80432a06" class="cell" data-vscode="{&quot;languageId&quot;:&quot;apl&quot;}">
 <pre class="apl cell-code"><code>- 3.2</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">¯3.2
 </span>
 </div>
 </div>
-<div id="b7104b05" class="cell">
+<div id="b7104b05" class="cell" data-vscode="{&quot;languageId&quot;:&quot;apl&quot;}">
 <pre class="apl cell-code"><code>- ¯7</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">7
 </span>
 </div>
 </div>
-<div id="4acfbbea" class="cell">
+<div id="4acfbbea" class="cell" data-vscode="{&quot;languageId&quot;:&quot;apl&quot;}">
 <pre class="apl cell-code"><code>- 0</code></pre>
 <div class="cell-output cell-output-display">
 <span style="white-space:pre; font-family: monospace">0
@@ -791,10 +781,55 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="seem/blog" data-repo-id="R_kgDOIBWk3A" data-category="Announcements" data-category-id="DIC_kwDOIBWk3M4CSSa6" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
-</script>
 <input type="hidden" id="giscus-base-theme" value="light">
 <input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+function loadGiscusWhenReady() {
+  // Function to get the theme based on body class
+  const getTheme = () => {
+    const baseTheme = document.getElementById('giscus-base-theme').value;
+    const altTheme = document.getElementById('giscus-alt-theme').value;
+    return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+  };
+  // Create the Giscus script and add it to the desired location
+  const loadGiscus = () => {
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "seem/blog";
+    script.dataset.repoId = "R_kgDOIBWk3A";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOIBWk3M4CSSa6";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  };
+  // MutationObserver to detect when the 'quarto-light' or 'quarto-dark' class is added to the body
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (mutation.type === "attributes" && mutation.attributeName === "class") {
+        if (document.body.classList.contains('quarto-light') || document.body.classList.contains('quarto-dark')) {
+          loadGiscus();
+          observer.disconnect(); // Stop observing once Giscus is loaded
+          break;
+        }
+      }
+    }
+  });
+  // Start observing the body for class attribute changes
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+}
+loadGiscusWhenReady();
+</script>
 </div> <!-- /content -->
 
 

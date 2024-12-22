@@ -9,7 +9,7 @@
 <link>https://wasimlorgat.com/tils/</link>
 <atom:link href="https://wasimlorgat.com/tils/index.xml" rel="self" type="application/rss+xml"/>
 <description>Recent notes on wasimlorgat.com</description>
-<generator>quarto-1.7.2</generator>
+<generator>quarto-1.7.5</generator>
 <lastBuildDate>Mon, 22 May 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Using shot-scraper to automate screenshots for my writing</title>
@@ -324,14 +324,7 @@ font-style: inherit;">"document.querySelector('#quarto-header').style.display = 
 <li><p><strong>High-quality prompts:</strong> If you do all of the above perfectly, you still won’t get great results without high quality prompts. I’m not a prompt guru myself, so I took from the excellent prompts curated at <a href="https://publicprompts.art/">PublicPrompts</a> as well as <a href="https://lexica.art">Lexica</a>.</p>
 <p>Even with great prompts, it is a struggle to get it to deviate from the training set. I had to tweak the order of words, and try adding and removing certain words to get it to work. For some reason, adding “Hypnotic illustration” to the start of the prompt worked consistently 🤷🏽‍♂️.</p></li>
 </ol>
-<p>Please don’t hestitate to share any questions or comments in the Twitter thread below or via <a href="mailto:mwlorgat@gmail.com">email</a>:</p>
-<blockquote class="twitter-tweet blockquote">
-<p lang="en" dir="ltr">
-I'm super impressed with the quality of Dreambooth with <a href="https://twitter.com/huggingface?ref_src=twsrc%5Etfw"><span class="citation" data-cites="huggingface">@huggingface</span></a> Diffusers 🚀 using only 14 pics of myself!<br><br>All of these are generated, with different prompts for: plain photo, psy art, anime, toy story<br><br>What worked for me:<br><br>1. As always, the most crucial element is data… <a href="https://t.co/ueZd13AuwR">pic.twitter.com/ueZd13AuwR</a>
-</p>
-— Wasim Lorgat (<span class="citation" data-cites="wasimlorgat">@wasimlorgat</span>) <a href="https://twitter.com/wasimlorgat/status/1632636435722534913?ref_src=twsrc%5Etfw">March 6, 2023</a>
-</blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Please don’t hestitate to share any questions or comments below.</p>
 
 
 
@@ -631,7 +624,7 @@ font-style: inherit;">True</span>)</span>
 
 
 
-<p>I recently started learning macOS development using SwiftUI as part of my latest project: <a href="https://twitter.com/wasimlorgat/status/1611615676220817415">building a macOS Jupyter frontend</a>. While I’m loving Swift (the language) and SwiftUI (the UI framework), it’s sometimes extremely difficult to find out information that feels like it should be readily available.</p>
+<p>I recently started learning macOS development using SwiftUI as part of my latest project: building a macOS Jupyter frontend. While I’m loving Swift (the language) and SwiftUI (the UI framework), it’s sometimes extremely difficult to find out information that feels like it should be readily available.</p>
 <p>The latest such case is how to use an <code>NSTableView</code> in SwiftUI. SwiftUI’s new <code>List</code> is great for iOS and multiplatform apps, but doesn’t seem to be designed for desktop-specific apps which can do with much more information-dense UIs.</p>
 <p>SwiftUI has the newer <code>Table</code> too, but it’s also quite limited at this stage. For example, I don’t think it’s possible to make an entire row clickable.</p>
 <p>This left me wanting to try out the much more battle-tested <code>NSTableView</code> – but as an Apple dev noob, I couldn’t get a minimal example up and running after a few hours of tinkering!</p>
@@ -1270,7 +1263,7 @@ font-style: inherit;">}</span></span>
 <span id="cb4-11">    <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">}</span></span></code></pre></div>
-<p>That’s it! This is the minimal implementation of an <code>NSTableView</code> in SwiftUI that I could find. Let me know on <a href="https://twitter.com/wasimlorgat">Twitter</a>, via <a href="mailto:mwlorgat@gmail.com">email</a>, or via the GitHub discussion below if you have any comments or suggestions.</p>
+<p>That’s it! This is the minimal implementation of an <code>NSTableView</code> in SwiftUI that I could find. Let me know via the GitHub discussion below if you have any comments or suggestions.</p>
 <p>Here are some next steps I have in mind:</p>
 <ul>
 <li>Get preview working (<a href="https://www.swiftjectivec.com/using-xcode-previews-for-uikit/">this</a> looks helpful)</li>
@@ -1369,12 +1362,12 @@ struct TableView: NSViewRepresentable { # <1>
 
 
 
-<p>GCP is my current preferred cloud provider for GPU servers. I <a href="https://twitter.com/wasimlorgat/status/1524301276179312644?s=20">compared prices last year</a> and found that GCP was the cheapest for lower-end GPUs. The notebook servers offered Vertex AI are very easy to setup. They come with PyTorch and NVIDIA/CUDA drivers already configured. I also prefer options that give me full control over the instance via an SSH connection from my terminal, which this does.</p>
-<p>Depending on when you’re reading this, these instructions may no longer be valid. Please <a href="mailto:mwlorgat@gmail.com">let me know</a> if that’s the case!</p>
+<p>GCP is my current preferred cloud provider for GPU servers. I compared prices last year and found that GCP was the cheapest for lower-end GPUs. The notebook servers offered Vertex AI are very easy to setup. They come with PyTorch and NVIDIA/CUDA drivers already configured. I also prefer options that give me full control over the instance via an SSH connection from my terminal, which this does.</p>
+<p>Depending on when you’re reading this, these instructions may no longer be valid. Please let me know in the comments below if that’s the case!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://wasimlorgat.com/tils/images/cloud-gpu-prices.jpeg" class="border shadow-sm img-fluid figure-img"></p>
-<figcaption>Cloud GPU prices as of May 2022 (<a href="https://twitter.com/wasimlorgat/status/1524301276179312644">via</a>).</figcaption>
+<figcaption>Cloud GPU prices as of May 2022.</figcaption>
 </figure>
 </div>
 <section id="setup-a-gcp-account" class="level2">
@@ -2368,11 +2361,11 @@ requires = [
 
 
 
-<p>Here’s a tiny demo of a point-and-click navigation interface with rich output powered by Jupyter notebooks and ipywidgets! I originally mentioned the idea in <a href="../tils/create-and-execute-cells-inside-a-jupyter-notebook.html">a previous TIL</a>. I also <a href="https://twitter.com/wasimlorgat/status/1539605620130603008">tweeted about it</a> which is the best place to leave any comments or questions if you’d like.</p>
+<p>Here’s a tiny demo of a point-and-click navigation interface with rich output powered by Jupyter notebooks and ipywidgets! I originally mentioned the idea in <a href="../tils/create-and-execute-cells-inside-a-jupyter-notebook.html">a previous TIL</a>.</p>
 <section id="tldr" class="level2">
 <h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
 <p>If all you need is a copy-pastable code snippet, here you go. Read on for a more in-depth description.</p>
-<div id="d1642696" class="cell">
+<div id="d1642696" class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> base64 <span class="im" style="color: #00769E;
@@ -2553,7 +2546,7 @@ font-style: inherit;">=</span>box_layout)</span></code></pre></div>
 <section id="minimal-implementation" class="level2">
 <h2 class="anchored" data-anchor-id="minimal-implementation">Minimal implementation</h2>
 <p>We start by defining a function to create and execute a code cell below the focused cell (see <a href="../tils/create-and-execute-cells-inside-a-jupyter-notebook.html">my previous TIL</a> if you’d like more detail on this part):</p>
-<div id="585a1a8a" class="cell">
+<div id="585a1a8a" class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}">
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
@@ -2587,7 +2580,7 @@ background-color: null;
 font-style: inherit;">    """</span>))</span></code></pre></div>
 </div>
 <p>We’re going to be using button widgets, which expect an on-click callback, so let’s define those next. The callback is expected to be a function accepting a single argument, <code>button</code>, to which the button object itself is passed - although we won’t be using it. We need to know the path that was clicked on as well, so we’ll have to <code>partial</code> that in later:</p>
-<div id="e57714b3" class="cell">
+<div id="e57714b3" class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}">
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
@@ -2614,7 +2607,7 @@ background-color: null;
 font-style: inherit;">')"</span>)</span></code></pre></div>
 </div>
 <p>Test if it works:</p>
-<div id="5e70bd3b" class="cell">
+<div id="5e70bd3b" class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}">
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">on_click_file(Path(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'point-and-click-directory-navigation-inside-a-jupyter-notebook.ipynb'</span>), <span class="va" style="color: #111111;
@@ -2631,7 +2624,7 @@ font-style: inherit;">None</span>)</span></code></pre></div>
 </script>
 </div>
 </div>
-<div id="eb304102" class="cell">
+<div id="eb304102" class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}">
 <div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">Path(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'point-and-click-directory-navigation-inside-a-jupyter-notebook.ipynb'</span>)</span></code></pre></div>
@@ -2641,7 +2634,7 @@ font-style: inherit;">'point-and-click-directory-navigation-inside-a-jupyter-not
 </div>
 <p>Neat! The cell above this was created by calling <code>on_click_file</code>.</p>
 <p>Finally, we implement a straightforward minimal <code>ls</code> function using <code>Button</code> widgets for <code>Path</code>s, and wrapping those in a <code>VBox</code> widget:</p>
-<div id="428247d4" class="cell">
+<div id="428247d4" class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}">
 <div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> ipywidgets <span class="im" style="color: #00769E;
@@ -2713,7 +2706,7 @@ font-style: inherit;">return</span> VBox(buttons)</span></code></pre></div>
 <section id="improved-styling" class="level2">
 <h2 class="anchored" data-anchor-id="improved-styling">Improved styling</h2>
 <p>I don’t like how the implementation above is styled, so here is another with a few purely stylistic improvements:</p>
-<div id="29a177c1" class="cell">
+<div id="29a177c1" class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}">
 <div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
@@ -2810,7 +2803,7 @@ font-style: inherit;">return</span> Box(buttons, layout<span class="op" style="c
 background-color: null;
 font-style: inherit;">=</span>box_layout)</span></code></pre></div>
 </div>
-<div id="2c1adb10" class="cell">
+<div id="2c1adb10" class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}">
 <div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1">ls(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'~/code/fastai'</span>)</span></code></pre></div>
@@ -2820,7 +2813,7 @@ font-style: inherit;">'~/code/fastai'</span>)</span></code></pre></div>
 </script>
 </div>
 </div>
-<p>Unfortunately, my current blog setup doesn’t support widgets, but you should be able to run this locally. You can also check out the <a href="https://twitter.com/wasimlorgat/status/1539605620130603008">demo video in my tweet</a>.</p>
+<p>Unfortunately, my current blog setup doesn’t support widgets, but you should be able to run this locally.</p>
 <p>If you pay close attention to the demo video, you’ll notice that it’s still styled slightly differently to what we’ve built here. Some styles can’t be changed through ipywidget’s <code>style</code> interface, so that was achieved by manually writing CSS with the <code>%%html</code> magic command followed by a <code>&lt;style&gt;...&lt;/style&gt;</code> tag, and then assigning a class to the buttons and boxes using their <code>add_class</code> method. I also implemented a custom widget with a small <code>render</code> JavaScript function that resized the output grid until it fit the width of the screen.</p>
 <p>I’m really excited with how this turned out! And it was far simpler than I’d expected. I’ll definitely be exploring the point-and-click navigation pattern more. I’m thinking about trying it out for exploring documentation about Python objects.</p>
 
@@ -2995,7 +2988,7 @@ define('hello', ["@jupyter-widgets/base"], function(widgets) {
 
 
 
-<p>I’ve been thinking a lot about <a href="https://twitter.com/wasimlorgat/status/1536549059292692481">unique Jupyter notebook interactions</a>. A pattern that keeps coming up in my head is to click on the output of one cell to create a new cell below it. For example, <code>ls()</code> could output file and directory widgets for the current directory. Clicking on a directory widget, say <code>foo</code>, could create a code cell below with code <code>ls(foo)</code>, to interactively browse through files.</p>
+<p>I’ve been thinking a lot about unique Jupyter notebook interactions. A pattern that keeps coming up in my head is to click on the output of one cell to create a new cell below it. For example, <code>ls()</code> could output file and directory widgets for the current directory. Clicking on a directory widget, say <code>foo</code>, could create a code cell below with code <code>ls(foo)</code>, to interactively browse through files.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3010,7 +3003,7 @@ Update (2022-06-23)
 </div>
 </div>
 <p>I found <a href="https://nbviewer.org/gist/fperez/0fb77c5faea8996208a7/NewCodeCellWidget.ipynb">this amazing gist</a> by <a href="http://fperez.org/">Fernando Perez</a> (originally by Jonathan Frederic, see the gist for more links) which enables this pattern! It turns out that IPython makes this pretty straightforward. You directly execute JavaScript code against the <code>IPython</code> API that creates a code cell, sets the text of the cell (which must be base64 encoded), then executes it:</p>
-<div id="121f7c34" class="cell">
+<div id="121f7c34" class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> base64</span>
@@ -3070,7 +3063,7 @@ font-style: inherit;">    '''</span>))</span>
 </script>
 </div>
 </div>
-<div id="be26462b" class="cell">
+<div id="be26462b" class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}">
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">print</span>(<span class="st" style="color: #20794D;

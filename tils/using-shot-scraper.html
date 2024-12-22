@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.2">
+<meta name="generator" content="quarto-1.7.5">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,10 +72,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b5f7554119bf71d72592b7584c7a43b5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4722a8983d6cc5d297256fb33f8efba1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0344d4fe0a7a2d6f1e2204bfd79d82c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6326d7280fcaea21636879fa2b376669.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -149,16 +149,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="https://github.com/seem"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../index.xml"> <i class="bi bi-rss" role="img">
-</i> 
-<span class="menu-text">Posts</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../tils/index.xml"> <i class="bi bi-rss" role="img">
-</i> 
-<span class="menu-text">TILs</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -751,10 +741,55 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="seem/blog" data-repo-id="R_kgDOIBWk3A" data-category="Announcements" data-category-id="DIC_kwDOIBWk3M4CSSa6" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
-</script>
 <input type="hidden" id="giscus-base-theme" value="light">
 <input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+function loadGiscusWhenReady() {
+  // Function to get the theme based on body class
+  const getTheme = () => {
+    const baseTheme = document.getElementById('giscus-base-theme').value;
+    const altTheme = document.getElementById('giscus-alt-theme').value;
+    return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+  };
+  // Create the Giscus script and add it to the desired location
+  const loadGiscus = () => {
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "seem/blog";
+    script.dataset.repoId = "R_kgDOIBWk3A";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOIBWk3M4CSSa6";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  };
+  // MutationObserver to detect when the 'quarto-light' or 'quarto-dark' class is added to the body
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (mutation.type === "attributes" && mutation.attributeName === "class") {
+        if (document.body.classList.contains('quarto-light') || document.body.classList.contains('quarto-dark')) {
+          loadGiscus();
+          observer.disconnect(); // Stop observing once Giscus is loaded
+          break;
+        }
+      }
+    }
+  });
+  // Start observing the body for class attribute changes
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+}
+loadGiscusWhenReady();
+</script>
 </div> <!-- /content -->
 
 

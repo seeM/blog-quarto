@@ -981,7 +981,7 @@ Why use a Virtual Private Server(VPS) instead of a modern platform as a service 
   <category>artificial intelligence</category>
   <guid>https://wasimlorgat.com/posts/how-to-create-an-ai-profile-picture-from-scratch.html</guid>
   <pubDate>Mon, 06 Mar 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://wasimlorgat.com/posts/images/dreambooth.png" medium="image" type="image/png"/>
+  <media:content url="https://wasimlorgat.com/posts/images/dreambooth.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>How to use NSTableView in SwiftUI</title>
